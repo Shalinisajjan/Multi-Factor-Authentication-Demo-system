@@ -1,0 +1,3 @@
+{% extends "base.html" %}{% block title %}Second factor{% endblock %}{% block content %}
+<section class="card narrow"><p class="eyebrow">SECOND FACTOR</p><h1>Verify it’s you</h1><p class="muted">Enter the current six-digit authenticator code or one unused recovery code.</p>
+<form method="post"><input type="hidden" name="csrf_token" value="{{ csrf_token() }}"><label>Authenticator or recovery code<input name="code" autocomplete="one-time-code" inputmode="numeric" maxlength="32" required autofocus></label><button>Verify and sign in</button></form><form method="post" action="{{ url_for('logout') }}" class="inline"><input type="hidden" name="csrf_token" value="{{ csrf_token() }}"><button class="secondary">Cancel</button></form></section>{% endblock %}

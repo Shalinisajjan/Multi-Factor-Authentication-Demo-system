@@ -1,0 +1,2 @@
+{% extends "base.html" %}{% block title %}Recovery codes{% endblock %}{% block content %}
+<section class="card narrow"><p class="eyebrow">SAVE THESE CODES</p><h1>Recovery codes</h1><p class="muted">Each code works once. Copy or print them now and keep them somewhere private. They will not be shown again.</p><div class="codes">{% for code in codes %}<code>{{ code }}</code>{% endfor %}</div><a class="button" href="{{ url_for('dashboard') }}">I’ve saved the codes</a></section>{% endblock %}

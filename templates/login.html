@@ -1,0 +1,4 @@
+{% extends "base.html" %}{% block title %}Sign in{% endblock %}{% block content %}
+<section class="card narrow"><p class="eyebrow">ACCOUNT ACCESS</p><h1>Welcome back</h1><p class="muted">Sign in with your password. Accounts with MFA will be asked for an authenticator or recovery code.</p>
+<form method="post"><input type="hidden" name="csrf_token" value="{{ csrf_token() }}"><label>Username<input name="username" autocomplete="username" minlength="3" maxlength="32" required></label><label>Password<input name="password" type="password" autocomplete="current-password" maxlength="128" required></label><button>Continue</button></form>
+<p class="muted">New to the demo? <a href="{{ url_for('register') }}">Create an account</a></p></section>{% endblock %}

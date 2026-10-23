@@ -1,0 +1,1 @@
+{% extends "base.html" %}{% block title %}Request error{% endblock %}{% block content %}<section class="card narrow"><h1>Request could not be completed</h1><p class="muted">{{ message }}</p><a href="{{ url_for('index') }}">Return to the demo</a></section>{% endblock %}
